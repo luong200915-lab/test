@@ -1,0 +1,428 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Be Vietnam Pro", "DM Sans", monospace;
+  --font-sans: "DM Sans", "Be Vietnam Pro", sans-serif;
+  --font-serif: "Bodoni Moda", "Playfair Display", serif;
+}
+
+@layer base {
+  :root {
+    --cuchi-darkgreen: #243d2b;
+    --cuchi-green: #617a50;
+    --cuchi-beige: #f2e8d5;
+    --cuchi-lightbeige: #faf6ed;
+    --cuchi-terracotta: #c76b45;
+    --cuchi-darkbrown: #352c24;
+  }
+
+  body {
+    font-family:
+      "DM Sans",
+      "Be Vietnam Pro",
+      "DejaVu Sans",
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+    background-color: var(--cuchi-beige);
+    color: var(--cuchi-darkbrown);
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-heading {
+    font-family: "Grand Hotel", "Be Vietnam Pro", sans-serif;
+    letter-spacing: 0.04em;
+  }
+
+  .font-editorial {
+    font-family: "Lobster", "Playfair Display", "Be Vietnam Pro", serif;
+  }
+
+  .font-body {
+    font-family: "DM Sans", "Be Vietnam Pro", "DejaVu Sans", sans-serif;
+  }
+
+  .font-mono,
+  pre,
+  code {
+    font-family: "DM Sans", "Be Vietnam Pro", monospace !important;
+  }
+
+  p {
+    font-family:  "Be Vietnam Pro";
+  }
+
+  /* Áp dụng font riêng cho tất cả các nút bấm (bao gồm cả thẻ button và các thành phần có class tương tự) */
+  button,
+  .btn {
+    font-family: 'Montserrat', 'Be Vietnam Pro', sans-serif;
+  }
+}
+
+/* Custom retro stamp & badge styles */
+.retro-border {
+  border: 1px solid rgba(53, 44, 36, 0.2);
+}
+
+.retro-border-dashed {
+  border: 1px dashed rgba(97, 122, 80, 0.4);
+}
+
+.paper-shadow {
+  box-shadow: 2px 3px 0px rgba(36, 61, 43, 0.15);
+}
+
+.paper-shadow-lg {
+  box-shadow: 4px 6px 0px rgba(36, 61, 43, 0.2);
+}
+
+/* Custom Leaflet styling */
+.leaflet-popup-content-wrapper {
+  background-color: #faf6ed !important;
+  color: #352c24 !important;
+  border: 2px solid #243d2b !important;
+  border-radius: 4px !important;
+  box-shadow: 4px 4px 0px rgba(36, 61, 43, 0.3) !important;
+  padding: 0 !important;
+  font-family: "DM Sans", "Be Vietnam Pro", sans-serif !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background-color: #faf6ed !important;
+  border: 2px solid #243d2b !important;
+}
+
+/* Archival stamp effect */
+.archival-stamp {
+  border: 2px solid #c76b45;
+  color: #c76b45;
+  font-family: "Bebas Neue", "Oswald", "Be Vietnam Pro", sans-serif;
+  letter-spacing: 0.08em;
+  transform: rotate(-3deg);
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+/* Member card background zoom */
+.member-bg-img {
+  transform: scale(1.0);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) !important;
+  will-change: transform;
+}
+
+.member-card:hover .member-bg-img {
+  transform: scale(1.06);
+}
+
+.member-bg-img-center-subject {
+  transform: scale(1.24) translateX(28px);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) !important;
+  will-change: transform;
+}
+
+.member-card:hover .member-bg-img-center-subject {
+  transform: scale(1.31) translateX(28px);
+}
+
+.member-bg-img-nhi {
+  transform: scale(1.15) translateX(10px);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) !important;
+  will-change: transform;
+}
+
+.member-card:hover .member-bg-img-nhi {
+  transform: scale(1.22) translateX(10px);
+}
+
+.member-bg-img-anh {
+  transform: scale(1.5) translateX(-18px);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) !important;
+  will-change: transform;
+}
+
+.member-card:hover .member-bg-img-anh {
+  transform: scale(1.58) translateX(-18px);
+}
+
+.member-bg-img-nhu {
+  transform: scale(1.62) translateX(-4px);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) !important;
+  will-change: transform;
+}
+
+.member-card:hover .member-bg-img-nhu {
+  transform: scale(1.70) translateX(-4px);
+}
+
+.member-bg-img-lam {
+  transform: scale(1.0);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) !important;
+  will-change: transform;
+}
+
+.member-card:hover .member-bg-img-lam {
+  transform: scale(1.06);
+}
+
+.member-bg-img-linh {
+  transform: scale(1.32);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) !important;
+  will-change: transform;
+}
+
+.member-card:hover .member-bg-img-linh {
+  transform: scale(1.40);
+}
+
+
+
+/* Opening title screen: forest-green identity for Xã An Nhơn Tây. */
+.an-nyon-intro {
+  isolation: isolate;
+  background: #315b3e;
+  color: #f4ebd9;
+}
+
+.an-nyon-watermark {
+  position: absolute;
+  inset: -22%;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform: rotate(-27deg) scale(1.08);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.an-nyon-watermark span {
+  display: block;
+  width: max-content;
+  white-space: nowrap;
+  color: rgba(244, 235, 217, 0.075);
+  font-family: "DM Sans", "Be Vietnam Pro", sans-serif;
+  font-size: clamp(13px, 2vw, 25px);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.an-nyon-watermark span:nth-child(even) {
+  transform: translateX(-18%);
+}
+
+.an-nyon-intro-title {
+  width: fit-content;
+  max-width: 100%;
+  color: #f4ebd9;
+  font-family: "Bebas Neue", "Oswald", "Be Vietnam Pro", sans-serif;
+  font-size: clamp(2.1rem, 8.2vw, 8rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0.025em;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  text-shadow: 0 5px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Mobile layout safeguards; desktop styling remains unchanged. */
+html, body, #root {
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .an-nyon-intro-title {
+    font-size: clamp(2rem, 10vw, 3.6rem);
+    letter-spacing: 0.005em;
+    line-height: 1.16;
+  }
+
+  .an-nyon-watermark span {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+
+  /* Keep wide data tables usable on narrow screens without breaking the page. */
+  table {
+    max-width: 100%;
+  }
+
+  .leaflet-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  input, select, textarea, button {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .an-nyon-intro-title,
+  .an-nyon-watermark {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* EDKR-style letter scramble / chromatic glitch for the An Nhon Tay intro. */
+.an-nyon-intro-title {
+  display: inline-block;
+  transform-origin: center;
+  position: relative;
+  font-family: "Bebas Neue", "Oswald", "Be Vietnam Pro", sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 8.2vw, 8rem);
+  letter-spacing: 0.015em;
+  line-height: 1.08;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  text-shadow: 0 2px 0 rgba(244,235,217,.12);
+}
+.an-nyon-glitch-char {
+  display: inline-block;
+  min-width: .18em;
+  position: relative;
+  will-change: transform, filter;
+}
+.an-nyon-intro-title.is-glitching .an-nyon-glitch-char {
+  animation: an-nyon-edkr-jitter 115ms steps(2, end) infinite;
+  text-shadow: -2px 0 rgba(255,35,85,.72), 2px 0 rgba(0,220,255,.72);
+}
+.an-nyon-intro-title.is-locked .an-nyon-glitch-char {
+  animation: an-nyon-edkr-settle 520ms cubic-bezier(.2,.8,.2,1) both;
+  text-shadow: 0 5px 28px rgba(0,0,0,.12);
+}
+@keyframes an-nyon-edkr-jitter {
+  0% { transform: translate(0,0) skewX(0deg) scaleY(1); filter: blur(0); }
+  25% { transform: translate(-1px,1px) skewX(-8deg) scaleY(.92); filter: blur(.45px); }
+  50% { transform: translate(1px,-1px) skewX(6deg) scaleY(1.08); filter: blur(0); }
+  75% { transform: translate(-1px,0) skewX(-3deg) scaleY(.97); filter: blur(.3px); }
+  100% { transform: translate(0,0) skewX(0deg) scaleY(1); filter: blur(0); }
+}
+@keyframes an-nyon-edkr-settle {
+  0% { transform: translateY(-5px) scaleY(1.18); filter: blur(2px); }
+  55% { transform: translateY(2px) scaleY(.94); filter: blur(.3px); }
+  100% { transform: translateY(0) scaleY(1); filter: blur(0); }
+}
+@media (max-width: 640px) {
+  .an-nyon-intro-title { font-size: clamp(1.85rem, 10vw, 3.5rem); letter-spacing: 0; line-height: 1.18; }
+  .an-nyon-glitch-char { min-width: .16em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .an-nyon-intro-title.is-glitching .an-nyon-glitch-char,
+  .an-nyon-intro-title.is-locked .an-nyon-glitch-char { animation: none !important; }
+}
+
+
+/* Exact EDKR-style loader: centered colored lettering with a brief flicker only. */
+.edkr-loader {
+  background: #080808;
+  color: #fff;
+}
+.edkr-wordmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: calc(100vw - 28px);
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(10px, 2.05vw, 22px);
+  font-weight: 700;
+  letter-spacing: clamp(0.12em, 0.48vw, 0.34em);
+  line-height: 1;
+}
+.edkr-letter {
+  display: inline-block;
+  opacity: 1;
+  transform-origin: center;
+  animation: edkr-logo-flicker 1.15s steps(1, end) infinite;
+  will-change: opacity, transform;
+}
+.edkr-space {
+  display: inline-block;
+  width: 0.48em;
+}
+@keyframes edkr-logo-flicker {
+  0%, 10%, 17%, 29%, 44%, 58%, 73%, 87%, 100% { opacity: 1; transform: scaleY(1); }
+  11%, 15%, 30%, 42%, 59%, 70%, 88% { opacity: 0.12; transform: scaleY(0.22); }
+  16%, 43%, 72% { opacity: 0.55; transform: scaleY(0.72); }
+}
+@media (max-width: 640px) {
+  .edkr-wordmark {
+    font-size: clamp(9px, 2.7vw, 15px);
+    letter-spacing: clamp(0.08em, 0.32vw, 0.18em);
+    max-width: calc(100vw - 20px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .edkr-letter { animation: none; }
+}
+
+
+/* Match the supplied An Nhon Tay title reference while preserving EDKR flicker timing. */
+.edkr-loader {
+  background: #315b40;
+  color: #f4ebd9;
+}
+.edkr-wordmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  max-width: calc(100vw - 40px);
+  white-space: nowrap;
+  color: #f4ebd9;
+  font-family: "Arial Black", "Be Vietnam Pro", Arial, sans-serif;
+  font-size: clamp(2rem, 8.1vw, 8rem);
+  font-weight: 900;
+  letter-spacing: 0.012em;
+  line-height: 1.08;
+  text-align: center;
+}
+.edkr-letter {
+  color: #f4ebd9 !important;
+  font-weight: 900;
+  animation: edkr-logo-flicker 1.15s steps(1, end) infinite;
+}
+.edkr-space {
+  width: 0.48em;
+}
+@media (max-width: 640px) {
+  .edkr-wordmark {
+    max-width: calc(100vw - 24px);
+    font-size: clamp(1.35rem, 7.2vw, 3rem);
+    letter-spacing: 0.005em;
+    line-height: 1.12;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .edkr-letter { animation: none; }
+}
+@media (max-width: 640px) {
+  .edkr-loader button {
+    bottom: 24px !important;
+    right: 20px !important;
+    padding: 9px 18px !important;
+    font-size: 12px !important;
+  }
+}
