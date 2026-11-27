@@ -2,13 +2,14 @@ import express from 'express';
 import { createServer as createViteServer } from 'vite';
 import dotenv from 'dotenv';
 import { aiService } from './server/aiService';
+import { syncDataToSource } from './server/syncDataService';
 
 dotenv.config();
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
-app.use(express.json({ limit: '1mb' }));
+app.use(express.json({ limit: '50mb' }));
 
 // Health check & status endpoint for AI
 app.get('/api/ai-status', (_req, res) => {
@@ -17,6 +18,37 @@ app.get('/api/ai-status', (_req, res) => {
     provider: 'Google Gemini AI (Real LLM)',
     model: 'gemini-3.5-flash'
   });
+});
+
+// Sync Admin CMS / LocalStorage data directly into source code (src/data/cuchiData.ts)
+// writeToSourceCode=true: also rewrites cuchiData.ts (only on explicit Admin CMS button press)
+// writeToSourceCode=false (default): only snapshots to admin_exported_data.json (safe, no HMR reload)
+app.post('/api/sync-data-to-source', (req, res) => {
+  try {
+    const { articles, locations, media, writeToSourceCode } = req.body;
+    if (!articles && !locations && !media) {
+      return res.status(400).json({
+        error: 'INVALID_PAYLOAD',
+        message: 'Khong co du lieu bai viet, dia diem hoac media de dong bo.'
+      });
+    }
+
+    const result = syncDataToSource({ articles, locations, media, writeToSourceCode: !!writeToSourceCode });
+    if (writeToSourceCode) {
+      console.log(
+        `[Sync] Da ghi vao source code luc ${result.syncedAt}: ${result.articlesCount} bai viet, ${result.locationsCount} dia diem, ${result.mediaCount} media.`
+      );
+    } else {
+      console.log(`[Sync] Da luu snapshot JSON luc ${result.syncedAt}: ${result.articlesCount} bai viet.`);
+    }
+    return res.json(result);
+  } catch (err: any) {
+    console.error('Loi khi dong bo du lieu vao source code:', err?.message || err);
+    return res.status(500).json({
+      error: 'SYNC_ERROR',
+      message: err?.message || 'Da xay ra loi khi ghi du lieu vao file source code.'
+    });
+  }
 });
 
 // AI Assistant endpoint

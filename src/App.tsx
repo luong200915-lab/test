@@ -216,17 +216,12 @@ export default function App() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-2 border-b-2 border-[#243D2B]/20 pb-3">
               <div>
                 <span className="text-xs font-mono uppercase tracking-widest text-[#C76B45] font-bold">
-                  Địa Không Gian & Di Tích Lịch Sử
+                  Bản đồ Hành chính 2025 & Địa Không Gian Lịch Sử
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl text-[#243D2B] tracking-wide mt-5">
-                  BẢN ĐỒ VĂN HÓA TƯƠNG TÁC
+                  BẢN ĐỒ XÃ AN NHƠN TÂY
                 </h2>
               </div>
-              <p className="text-xs md:text-sm text-[#352C24]/75 max-w-md font-body">
-                Hệ thống bản đồ số với tọa độ GPS đã xác minh, cho phép định vị
-                trực quan các di tích kháng chiến, làng nghề và địa điểm du lịch
-                sinh thái An Nhơn Tây.
-              </p>
             </div>
           </ScrollReveal>
           

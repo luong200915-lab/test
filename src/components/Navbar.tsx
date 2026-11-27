@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import {
   Compass,
   MapPin,
@@ -86,7 +86,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         >
           <div className="h-10 px-2 py-0.5 rounded flex items-center justify-center transition-all shadow shrink-0">
             <img
-              src="/test/assets/aistudio/logo.png"
+              src="/CuChi/assets/aistudio/logo.png"
               alt="Logo Lớp 12A5"
               className="h-8 w-auto object-contain"
             />
@@ -197,4 +197,3 @@ export const Navbar: React.FC<NavbarProps> = ({
     </header>
   );
 };
-

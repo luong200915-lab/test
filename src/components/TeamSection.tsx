@@ -33,7 +33,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#243D2B] text-[#FAF6ED] text-xs font-mono uppercase tracking-widest mb-3">
             <GraduationCap className="w-4 h-4 text-[#C76B45]" />
-            Dự Án Nghiên Cứu Học Tập Địa Phương
+            DỰ ÁN NGHIÊN CỨU HỌC TẬP VỀ XÃ AN NHƠN TÂY
           </div>
           <h2 className="font-['Be_Vietnam_Pro',sans-serif] font-bold text-3xl md:text-4xl text-[#243D2B] tracking-wide mb-3">
             TẬP THỂ HỌC SINH LỚP 12A5

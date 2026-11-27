@@ -4,6 +4,9 @@ import {
   X,
   ExternalLink,
   MapPin,
+  Calendar,
+  ShieldCheck,
+  BookOpen,
 } from "lucide-react";
 
 interface ArticleDetailModalProps {

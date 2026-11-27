@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://luong200915-lab.github.io/test/",
+  "homepage": "https://luong200915-lab.github.io/CuChi",
   "scripts": {
     "dev": "tsx watch server.ts",
     "build": "vite build",

@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {
-  Bot,
   Send,
   Sparkles,
   MapPin,
@@ -196,9 +195,11 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({
             <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#C76B45]"></span>
           </span>
 
-          <div className="p-1.5 bg-[#C76B45] rounded-full text-[#FAF6ED] group-hover:rotate-12 transition-transform">
-            <Sparkles className="w-4 h-4" />
-          </div>
+          <img
+            src="/CuChi/assets/aistudio/logo.png"
+            alt="Logo Lớp 12A5"
+            className="h-7 w-auto object-contain group-hover:scale-105 transition-transform shrink-0"
+          />
 
           <div className="text-left font-mono pr-1">
             <div className="text-xs font-bold leading-tight flex items-center gap-1.5">
@@ -216,9 +217,11 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({
       {/* Header */}
       <div className="bg-[#243D2B] text-[#FAF6ED] p-3 px-4 flex items-center justify-between border-b border-[#243D2B] select-none shrink-0">
         <div className="flex items-center gap-2.5">
-          <div className="p-1.5 bg-[#C76B45] rounded-full text-[#FAF6ED] shadow-sm">
-            <Bot className="w-4 h-4" />
-          </div>
+          <img
+            src="/CuChi/assets/aistudio/logo.png"
+            alt="Logo Lớp 12A5"
+            className="h-8 w-auto object-contain shrink-0"
+          />
           <div>
             <div className="flex items-center gap-2">
               <h3 className="font-heading text-lg md:text-xl tracking-wider uppercase leading-none">

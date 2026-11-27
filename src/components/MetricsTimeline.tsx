@@ -21,7 +21,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export const MetricSection: React.FC = () => {
-  const INITIAL_TIMELINE_COUNT = 1;
+  const INITIAL_TIMELINE_COUNT = 3;
   const [visibleTimelineCount, setVisibleTimelineCount] = useState<number>(
     INITIAL_TIMELINE_COUNT,
   );
@@ -42,10 +42,10 @@ export const MetricSection: React.FC = () => {
     } else {
       // Chưa hiện hết -> Mở thêm 1 mốc và cuộn xuống 180px để thấy nội dung mới
       setVisibleTimelineCount((prev) =>
-        Math.min(prev + 1, TIMELINE_DATA.length),
+        Math.min(prev + 3, TIMELINE_DATA.length),
       );
       setTimeout(() => {
-        window.scrollBy({ top: 180, behavior: "smooth" });
+        window.scrollBy({ top: 240, behavior: "smooth" });
       }, 80);
     }
   };
@@ -103,14 +103,14 @@ export const MetricSection: React.FC = () => {
                   Hợp Nhất 3 Xã Trọng Điểm
                 </h3>
                 <p className="text-sm text-[#687267] leading-relaxed">
-                  3 xã <strong>Tân Phú Trung</strong>,{" "}
-                  <strong>Tân Thông Hội</strong> và{" "}
-                  <strong>Phước Vĩnh An</strong> chính thức hợp nhất thành{" "}
-                  <strong>xã An Nhơn Tây</strong>.
+                  Theo phương án sắp xếp ĐVHC của TP.HCM, 3 xã{" "}
+                  <strong>An Nhơn Tây</strong>, <strong>An Phú</strong> và{" "}
+                  <strong>Phú Mỹ Hưng</strong> được hợp nhất thành{" "}
+                  <strong>xã An Nhơn Tây</strong> mới.
                 </p>
                 <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-[#356B4B] font-semibold flex items-center justify-between">
                   <span>Cửa ngõ Tây Bắc TP.HCM</span>
-                  <span>Cách TT 30–40 km</span>
+                  <span>Trụ sở tại Tỉnh lộ 7</span>
                 </div>
               </div>
             </SwiperSlide>
@@ -129,15 +129,15 @@ export const MetricSection: React.FC = () => {
                 <div className="grid grid-cols-2 gap-3 my-3">
                   <div className="bg-[#F5F0E6] p-2.5 rounded-lg text-center">
                     <span className="block text-xl font-black text-[#356B4B]">
-                      65,87
+                      77,70
                     </span>
                     <span className="text-[11px] text-[#687267]">
-                      km² diện tích
+                      km² diện tích tự nhiên
                     </span>
                   </div>
                   <div className="bg-[#F5F0E6] p-2.5 rounded-lg text-center">
                     <span className="block text-xl font-black text-[#356B4B]">
-                      ~128.000
+                      40.896
                     </span>
                     <span className="text-[11px] text-[#687267]">
                       người dân sinh sống
@@ -145,8 +145,7 @@ export const MetricSection: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-xs text-[#687267]">
-                  Mật độ phân bổ dân cư hài hòa giữa các phân khu đô thị và dải
-                  vành đai nông nghiệp sinh thái.
+                  Mật độ dân số đạt 526 người/km² (số liệu 31/12/2024). Trải dài hữu ngạn sông Sài Gòn, giữ vai trò vành đai sinh thái của thành phố.
                 </p>
               </div>
             </SwiperSlide>
@@ -166,19 +165,18 @@ export const MetricSection: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-[#687267]">Tốc độ tăng trưởng:</span>
                     <strong className="text-[#356B4B] font-bold">
-                      &gt; 50%
+                      Ổn định &gt; 10%
                     </strong>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-[#687267]">Thu ngân sách:</span>
                     <strong className="text-[#356B4B] font-bold">
-                      Đạt chỉ tiêu được giao
+                      Đạt &amp; vượt chỉ tiêu
                     </strong>
                   </div>
                 </div>
                 <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-[#687267]">
-                  Kinh tế địa phương chuyển biến tích cực, thu hút nhiều dự án
-                  sản xuất sạch và dịch vụ.
+                  Kinh tế chuyển dịch tích cực sang nông nghiệp đô thị, thương mại dịch vụ và du lịch lịch sử - sinh thái; thu ngân sách luôn đảm bảo kế hoạch.
                 </div>
               </div>
             </SwiperSlide>
@@ -197,16 +195,16 @@ export const MetricSection: React.FC = () => {
                 <div className="space-y-3 mt-3">
                   <div>
                     <div className="flex justify-between text-xs font-semibold mb-1">
-                      <span>Tỷ trọng CN & Thương mại Dịch vụ</span>
-                      <span className="text-[#356B4B]">&gt; 70%</span>
+                      <span>Tỷ trọng TM - Dịch vụ &amp; TTCN</span>
+                      <span className="text-[#356B4B]">&gt; 65%</span>
                     </div>
                     <div className="w-full h-2 rounded-full bg-[#EAE2D2] overflow-hidden">
-                      <div className="h-full bg-[#356B4B] rounded-full w-[72%]"></div>
+                      <div className="h-full bg-[#356B4B] rounded-full w-[65%]"></div>
                     </div>
                   </div>
                   <div>
                     <div className="flex justify-between text-xs font-semibold mb-1">
-                      <span>Tỷ lệ lao động phi nông nghiệp</span>
+                      <span>Tỷ lệ lao động phi nông nghiệp &amp; đào tạo</span>
                       <span className="text-[#356B4B]">&gt; 70%</span>
                     </div>
                     <div className="w-full h-2 rounded-full bg-[#EAE2D2] overflow-hidden">
@@ -230,15 +228,14 @@ export const MetricSection: React.FC = () => {
                 </h3>
                 <div className="p-3 rounded-xl bg-[#F5F0E6] text-center my-2">
                   <span className="text-2xl font-black text-[#D9A85B]">
-                    ~1,5 lần
+                    &gt; 75 tr
                   </span>
                   <p className="text-xs text-[#29372D] font-medium mt-1">
-                    Cao hơn thu nhập bình quân đầu người của toàn thành phố
+                    đồng/người/năm (chuẩn Nông thôn mới nâng cao)
                   </p>
                 </div>
                 <p className="text-xs text-[#687267] mt-2">
-                  Tỷ lệ hộ nghèo giảm bền vững, hệ thống an sinh xã hội và chăm
-                  sóc gia đình chính sách được chú trọng hàng đầu.
+                  Duy trì vững chắc chuẩn NTM nâng cao, hộ nghèo giảm sâu theo chuẩn đa chiều, 100% hộ dân dùng nước sạch và điện lưới quốc gia.
                 </p>
               </div>
             </SwiperSlide>
@@ -253,17 +250,16 @@ export const MetricSection: React.FC = () => {
                     Điểm sáng văn hóa
                   </span>
                   <h3 className="text-lg font-bold text-white mt-1 mb-2">
-                    3 Không Gian Văn Hóa Bác Hồ
+                    Không Gian Văn Hóa Bác Hồ
                   </h3>
                   <p className="text-sm text-white/85 leading-relaxed">
-                    Xã An Nhơn Tây tiên phong lan tỏa Không gian Văn hóa Hồ Chí Minh
-                    tại <strong>Địa đạo An Nhơn Tây (27/7/2025)</strong>,{" "}
-                    <strong>Thư viện điện tử 776 đầu sách (7/2026)</strong> và{" "}
-                    <strong>Chùa Hoằng Linh (11/11/2022)</strong>.
+                    Xã An Nhơn Tây tiên phong lan tỏa Không gian Văn hóa Hồ Chí Minh tại{" "}
+                    <strong>Địa đạo Bến Dược</strong>,{" "}
+                    <strong>Chùa Hoằng Linh (11/11/2022)</strong> (mô hình điểm trong cơ sở tôn giáo), cùng hệ thống trường học và công sở trên địa bàn.
                   </p>
                 </div>
                 <div className="mt-4 pt-3 border-t border-white/20 text-xs text-[#D9A85B] font-semibold">
-                  ★ 100% xã hội hóa thư viện điện tử
+                  ★ Lan tỏa sâu rộng trong đời sống nhân dân
                 </div>
               </div>
             </SwiperSlide>
@@ -281,13 +277,14 @@ export const MetricSection: React.FC = () => {
               Hợp Nhất 3 Xã Trọng Điểm
             </h3>
             <p className="text-sm text-[#687267] leading-relaxed">
-              3 xã <strong>Tân Phú Trung</strong>,{" "}
-              <strong>Tân Thông Hội</strong> và <strong>Phước Vĩnh An</strong>{" "}
-              chính thức hợp nhất thành <strong>xã An Nhơn Tây</strong>.
+              Theo phương án sắp xếp ĐVHC của TP.HCM, 3 xã{" "}
+              <strong>An Nhơn Tây</strong>, <strong>An Phú</strong> và{" "}
+              <strong>Phú Mỹ Hưng</strong> được hợp nhất thành{" "}
+              <strong>xã An Nhơn Tây</strong> mới.
             </p>
             <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-[#356B4B] font-semibold flex items-center justify-between">
               <span>Cửa ngõ Tây Bắc TP.HCM</span>
-              <span>Cách TT 30–40 km</span>
+              <span>Trụ sở tại Tỉnh lộ 7</span>
             </div>
           </div>
 
@@ -305,15 +302,15 @@ export const MetricSection: React.FC = () => {
             <div className="grid grid-cols-2 gap-3 my-3">
               <div className="bg-[#F5F0E6] p-2.5 rounded-lg text-center">
                 <span className="block text-xl font-black text-[#356B4B]">
-                  65,87
+                  77,70
                 </span>
                 <span className="text-[11px] text-[#687267]">
-                  km² diện tích
+                  km² diện tích tự nhiên
                 </span>
               </div>
               <div className="bg-[#F5F0E6] p-2.5 rounded-lg text-center">
                 <span className="block text-xl font-black text-[#356B4B]">
-                  ~128.000
+                  40.896
                 </span>
                 <span className="text-[11px] text-[#687267]">
                   người dân sinh sống
@@ -321,8 +318,7 @@ export const MetricSection: React.FC = () => {
               </div>
             </div>
             <p className="text-xs text-[#687267]">
-              Mật độ phân bổ dân cư hài hòa giữa các phân khu đô thị và dải vành
-              đai nông nghiệp sinh thái.
+              Mật độ dân số đạt 526 người/km² (số liệu 31/12/2024). Trải dài hữu ngạn sông Sài Gòn, giữ vai trò vành đai sinh thái của thành phố.
             </p>
           </div>
 
@@ -340,18 +336,17 @@ export const MetricSection: React.FC = () => {
             <div className="space-y-2 mt-2">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-[#687267]">Tốc độ tăng trưởng:</span>
-                <strong className="text-[#356B4B] font-bold">&gt; 50%</strong>
+                <strong className="text-[#356B4B] font-bold">Ổn định &gt; 10%</strong>
               </div>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-[#687267]">Thu ngân sách:</span>
                 <strong className="text-[#356B4B] font-bold">
-                  Đạt chỉ tiêu được giao
+                  Đạt &amp; vượt chỉ tiêu
                 </strong>
               </div>
             </div>
             <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-[#687267]">
-              Kinh tế địa phương chuyển biến tích cực, thu hút nhiều dự án sản
-              xuất sạch và dịch vụ.
+              Kinh tế chuyển dịch tích cực sang nông nghiệp đô thị, thương mại dịch vụ và du lịch lịch sử - sinh thái; thu ngân sách luôn đảm bảo kế hoạch.
             </div>
           </div>
 
@@ -369,16 +364,16 @@ export const MetricSection: React.FC = () => {
             <div className="space-y-3 mt-3">
               <div>
                 <div className="flex justify-between text-xs font-semibold mb-1">
-                  <span>Tỷ trọng CN & Thương mại Dịch vụ</span>
-                  <span className="text-[#356B4B]">&gt; 70%</span>
+                  <span>Tỷ trọng TM - Dịch vụ &amp; TTCN</span>
+                  <span className="text-[#356B4B]">&gt; 65%</span>
                 </div>
                 <div className="w-full h-2 rounded-full bg-[#EAE2D2] overflow-hidden">
-                  <div className="h-full bg-[#356B4B] rounded-full w-[72%]"></div>
+                  <div className="h-full bg-[#356B4B] rounded-full w-[65%]"></div>
                 </div>
               </div>
               <div>
                 <div className="flex justify-between text-xs font-semibold mb-1">
-                  <span>Tỷ lệ lao động phi nông nghiệp</span>
+                  <span>Tỷ lệ lao động phi nông nghiệp &amp; đào tạo</span>
                   <span className="text-[#356B4B]">&gt; 70%</span>
                 </div>
                 <div className="w-full h-2 rounded-full bg-[#EAE2D2] overflow-hidden">
@@ -401,15 +396,14 @@ export const MetricSection: React.FC = () => {
             </h3>
             <div className="p-3 rounded-xl bg-[#F5F0E6] text-center my-2">
               <span className="text-2xl font-black text-[#D9A85B]">
-                ~1,5 lần
+                &gt; 75 tr
               </span>
               <p className="text-xs text-[#29372D] font-medium mt-1">
-                Cao hơn thu nhập bình quân đầu người của toàn thành phố
+                đồng/người/năm (chuẩn Nông thôn mới nâng cao)
               </p>
             </div>
             <p className="text-xs text-[#687267] mt-2">
-              Tỷ lệ hộ nghèo giảm bền vững, hệ thống an sinh xã hội và chăm sóc
-              gia đình chính sách được chú trọng hàng đầu.
+              Duy trì vững chắc chuẩn NTM nâng cao, hộ nghèo giảm sâu theo chuẩn đa chiều, 100% hộ dân dùng nước sạch và điện lưới quốc gia.
             </p>
           </div>
 
@@ -423,17 +417,16 @@ export const MetricSection: React.FC = () => {
                 Điểm sáng văn hóa
               </span>
               <h3 className="text-lg font-bold text-white mt-1 mb-2">
-                3 Không Gian Văn Hóa Bác Hồ
+                Không Gian Văn Hóa Bác Hồ
               </h3>
               <p className="text-sm text-white/85 leading-relaxed">
                 Xã An Nhơn Tây tiên phong lan tỏa Không gian Văn hóa Hồ Chí Minh tại{" "}
-                <strong>Địa đạo An Nhơn Tây (27/7/2025)</strong>,{" "}
-                <strong>Thư viện điện tử 776 đầu sách (7/2026)</strong> và{" "}
-                <strong>Chùa Hoằng Linh (11/11/2022)</strong>.
+                <strong>Địa đạo Bến Dược</strong>,{" "}
+                <strong>Chùa Hoằng Linh (11/11/2022)</strong> (mô hình điểm trong cơ sở tôn giáo), cùng hệ thống trường học và công sở trên địa bàn.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-white/20 text-xs text-[#D9A85B] font-semibold">
-              ★ 100% xã hội hóa thư viện điện tử
+              ★ Lan tỏa sâu rộng trong đời sống nhân dân
             </div>
           </div>
         </div>
